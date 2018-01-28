@@ -16,7 +16,7 @@ from .method_call import call_api
 from . import auth
 from . import reflection
 
-__methods__ = reflection.__methods__.keys()
+__methods__ = list(reflection.__methods__.keys())
 __methods__.sort()
 
 __proxys__ = {}

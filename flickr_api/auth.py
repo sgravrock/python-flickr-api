@@ -246,7 +246,7 @@ class AuthHandler(object):
         as a conveniency only for single user settings.
 """
         with open(filename, "r") as f:
-            keys_info = f.read().split("\n")
+            keys_info = [x for x in f.read().split("\n") if x != ""]
             try:
                 key, secret, access_key, access_secret = keys_info
                 if set_api_keys:

@@ -17,7 +17,7 @@ from . import auth
 from .flickrerrors import FlickrError
 
 try:
-    from methods import __methods__
+    from .methods import __methods__
 
     def make_docstring(method, ignore_arguments=[], show_errors=True):
         info = __methods__[method]
